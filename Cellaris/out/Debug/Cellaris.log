@@ -1,0 +1,119 @@
+﻿  cellaris_basicfunctionality.cpp
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(52): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+  c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(90): note: see reference to class template instantiation 'XVector3<T>' being compiled
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(52): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(53): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(53): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(53): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(54): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(54): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(54): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(55): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(55): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(55): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(60): error C2144: syntax error: 'int' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(60): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(61): error C2144: syntax error: 'int' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(61): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(63): error C2144: syntax error: 'void' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(65): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(65): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(66): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(66): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(67): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(68): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(69): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(69): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(70): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(70): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(72): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(72): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(73): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(73): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(74): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(74): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(75): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(75): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(76): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(76): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(77): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(77): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(79): error C2144: syntax error: 'bool' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(79): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(82): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(82): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(84): error C2144: syntax error: 'void' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(84): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(97): error C2988: unrecognizable template declaration/definition
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(97): error C2143: syntax error: missing ';' before '<template-id>'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(97): error C2473: 'operator *': looks like a function definition, but there is no parameter list.
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(102): error C2988: unrecognizable template declaration/definition
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(102): error C2143: syntax error: missing ';' before '<end Parse>'
+  timestepper.cpp
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\timestepper.cpp(23): warning C4101: 'e': unreferenced local variable
+  scenetime.cpp
+  scenes.cpp
+  cellpopulation.cpp
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\cell\cellpopulation.cpp(23): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+  cell.cpp
+  cellaris.cpp
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(52): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+  c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(90): note: see reference to class template instantiation 'XVector3<T>' being compiled
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(52): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(53): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(53): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(53): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(54): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(54): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(54): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(55): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(55): error C2433: 'XVector3<T>::CUDA_CALLABLE': 'inline' not permitted on data declarations
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(55): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(60): error C2144: syntax error: 'int' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(60): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(61): error C2144: syntax error: 'int' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(61): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(63): error C2144: syntax error: 'void' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(65): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(65): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(66): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(66): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(67): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(68): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(68): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(69): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(69): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(70): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(70): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(72): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(72): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(73): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(73): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(74): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(74): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(75): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(75): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(76): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(76): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(77): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(77): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(79): error C2144: syntax error: 'bool' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(79): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(82): error C2144: syntax error: 'XVector3<T>' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(82): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(84): error C2144: syntax error: 'void' should be preceded by ';'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(84): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(97): error C2988: unrecognizable template declaration/definition
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(97): error C2143: syntax error: missing ';' before '<template-id>'
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(97): error C2473: 'operator *': looks like a function definition, but there is no parameter list.
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(102): error C2988: unrecognizable template declaration/definition
+c:\users\bcl\documents\cellaris\code\cellaris\cellaris\src\cellaris\utilities\math\vec3.h(102): error C2143: syntax error: missing ';' before '<end Parse>'
+  stdafx.cpp
+  Generating Code...

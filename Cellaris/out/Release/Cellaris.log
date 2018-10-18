@@ -1,0 +1,14 @@
+﻿  cell.cpp
+  cellpopulation.cpp
+src\cellaris\cell\cellpopulation.cpp(22): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+  cellaris.cpp
+  datastore.cpp
+  scenes.cpp
+  cellaris_basicfunctionality.cpp
+  Generating code
+  0 of 65 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Cellaris.vcxproj -> C:\Users\BCL\Documents\Cellaris\Code\Cellaris\Cellaris\out\Release\Cellaris.exe
+  Cellaris.vcxproj -> C:\Users\BCL\Documents\Cellaris\Code\Cellaris\Cellaris\out\Release\Cellaris.pdb (Full PDB)
