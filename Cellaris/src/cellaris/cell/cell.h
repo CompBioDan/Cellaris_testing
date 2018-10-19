@@ -1,99 +1,95 @@
-// Generic cell class to contain the representation of 'cells' constructed from particles and particle-particle constraints
-//
-// Base cell class contains information about the cells particle construction which is passed to FleX to solve physical interactions
-//
-// 
-//
+/**
+* 
+* Cellaris is an open-source, multi-scale agent-based modelling framework to allow for the particle-constraint based modelling of
+* complex cellular population dynamics using GPU optimised physics solving (via the FleX engine)
+* 
+* Cellaris is developed as part of the Biocompute lab, University of Bristol, in collaboration with BrisSynBio
+* see: https://biocomputelab.github.io/index.html
+*
+* Cellaris is developed using C++ in Microsoft Visual Studio, Windows 10
+*
+*
+* @author Daniel Ward (daniel.ward@bristol.ac.uk)
+* @version 1.0
+*
+**/
 
 #ifndef CELL_H_
 #define CELL_H_
 
-//#include "../stdafx.h"
+#include <random>
 #include <vector>
 #include <cmath>
-#include <iostream>
-#include <stdlib.h>
-#include <random>
+
 #include "../utilities/datastore.h"
 #include "../utilities/scenetime.h"
 #include "../utilities/scenes.h"
 
+/*
+* Basic cell class which represents most abstract 'cell' to model.
+*
+* Default single flex particle (spherical cell)
+*
+* Key cell data: m_cell_birth_time, m_cell_radius, m_cell_id, m_cell_cycle_length, m_cell_position
+* 
+*/
 
 //namespace cell_space {
 
-	class Cell {
+class Cell {
 
-	private:
+public:
 
-		bool mEndofCycle; // has the cell reached the end of its cell-cycle -> check to pass to initiate cell division
+	const double pi = 3.14159265358979323846;
 
-	public:
+	//Cell(const myVec3d& p_position); // cell constructor
 
-		//Cell(); // cell constructor
+	Cell* divide(); // method for dividing the cell creating new daughter cell and allocating data
 
-		Cell* divide(); // method for dividing the cell creating new daughter cell and allocating data
+	//virtual void update(); // update method for updating cell data following physics solving (flex)
 
-		//virtual void update();
+	void set_birth_time(double birthTime); // set the cells birthtime
 
-		// Cell methods
-		void setBirthTime(double birthTime); // set the cells birthtime
+	double get_birth_time() const; // return cell birth time
 
-		double getBirthTime() const; // return cell birth time
+	double get_cell_age() const; // return cell age
 
-		double getAge() const; // return cell age
+	void set_cell_position(myVec3d position); // set cell's position
 
-		void age();
+	myVec3d get_cell_position() const; // return cell position
 
-		void setCellPos(myVec3d position); // set cell's position
+	void set_cell_id(unsigned cellId); // allocate cell ID
 
-		myVec3d getCellPos() const; // return cell position
+	unsigned get_cell_id() const; // return cell ID value
 
-		bool readyToDivide(); // flag for division
+	void reset_cell(); // reset cell: currently used to reset the age of the mother cell following division
 
-		void setCellId(unsigned cellId); // allocate cell ID
+	bool ready_to_divide(); // flag for division
 
-		unsigned getCellId() const; // return cell ID value
+	void set_cell_radius(double p_radius);
 
-		void resetCell(); // reset cell: currently used to reset the age of the mother cell following division
+	double get_cell_radius();
 
-		void setParticleOffset(int particleoffset);
+	void set_cell_cycle_length(double cc_length);
 
-		void setNumberParticles(int numparticles);
+	double get_cell_cycle_length();
 
-		void setSpringOffset(int springoffset);
+protected:
 
-		void setNumberSprings(int numbersprings);
+	bool m_cellcycle_end; // has the cell reached the end of its cell-cycle -> check to pass to initiate cell division
 
-		int getNumberParticles();
+	myVec3d m_cell_position; // position of first particle in cell (arbitrary)
 
-		int getParticleOffset();
+	double m_cell_birth_time; // cell's birth time
 
-		int getNumberSprings();
+	unsigned m_cell_id; // identifier id for the cell
 
-		int getSpringOffset();
-
-		// Cell data
-		int particle_offset; // integer position of first cell particle within the FleX buffers
-
-		int number_particles; // number of particles that form the cell
-
-		int spring_offset; // integer position of first cell spring within the FleX buffers
-
-		int number_springs; // number of springs forming the cell
-
-		double cell_birth_time; // cell's birth time
-
-		double cell_age; // cell age
-
-		unsigned cell_id; // identifier id for the cell
-
-		myVec3d cell_position; // position of first particle in cell (arbitrary)
-
-		int cell_type; // CHANGE: create a seperate 'attribute' class to encompass cell differentiators
-
-		int grow; /** flag specifying whether a cell should grow this scene timestep */
-
-	};
+	int m_grow; /** flag specifying whether a cell should grow this scene timestep */
+	
+	double m_cell_cycle_length; // TO CHANGE :- implement specific cell-cycle models
+	
+	double m_cell_radius; // default single 'particle' cell radius corresponds to flex particle radius
+};
 //}
 
 #endif /* CELL_H_ */

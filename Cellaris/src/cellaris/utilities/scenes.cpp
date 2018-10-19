@@ -106,7 +106,7 @@
 		// correctly age all cells before main solve loop
 		for (int i = 0; i < getNumberCells(); ++i)
 		{
-			cell_population[i]->age();
+			cell_population[i]->ready_to_divide();
 		}
 		std::cout << "end time: " << p_scene_time->GetEndTime() << '\n';
 		std::cout << "current time: " << p_scene_time->GetTime() << '\n';
@@ -130,7 +130,7 @@
 			//UpdateCellPopulation();
 			for (int i = 0; i < getNumberCells(); ++i)
 			{
-				if (cell_population[i]->readyToDivide())
+				if (cell_population[i]->ready_to_divide())
 				{
 					addCell(cell_population[i]->divide());
 				}

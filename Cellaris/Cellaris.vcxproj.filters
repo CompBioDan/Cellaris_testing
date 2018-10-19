@@ -52,17 +52,17 @@
     <ClCompile Include="src\cellaris\utilities\timestepper.cpp">
       <Filter>src\utilities</Filter>
     </ClCompile>
-    <ClCompile Include="src\cellaris\cell\cellpopulation.cpp">
-      <Filter>src\cell</Filter>
-    </ClCompile>
     <ClCompile Include="src\cellaris\cell\cell.cpp">
       <Filter>src\cell</Filter>
     </ClCompile>
-    <ClCompile Include="src\cellaris\utilities\datastore.cpp">
-      <Filter>src\utilities\math</Filter>
-    </ClCompile>
     <ClCompile Include="src\cellaris\utilities\scenes.cpp">
       <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cellaris\utilities\datastore.cpp">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cellaris\cell\bacteria.cpp">
+      <Filter>src\cell</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,20 +78,20 @@
     <ClInclude Include="src\cellaris\utilities\timestepper.h">
       <Filter>src\utilities</Filter>
     </ClInclude>
-    <ClInclude Include="src\cellaris\cell\cellpopulation.h">
-      <Filter>src\cell</Filter>
-    </ClInclude>
     <ClInclude Include="src\cellaris\cell\cell.h">
       <Filter>src\cell</Filter>
     </ClInclude>
     <ClInclude Include="src\cellaris\cellaris.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\cellaris\utilities\datastore.h">
-      <Filter>src\utilities\math</Filter>
-    </ClInclude>
     <ClInclude Include="src\cellaris\utilities\scenes.h">
       <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cellaris\utilities\datastore.h">
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cellaris\cell\bacteria.h">
+      <Filter>src\cell</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
