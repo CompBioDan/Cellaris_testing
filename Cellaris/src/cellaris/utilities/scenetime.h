@@ -40,41 +40,41 @@ public:
 	/**
 	* @return a pointer to the scene time object
 	*/
-	static SceneTime* Instance();
+	static SceneTime* instance();
 
 	/** Sets the end time and number of timesteps - called after SetStartTime() but before other methods */
-	void SetEndTimeAndNumberOfTimeSteps(double endTime, unsigned totalSimulationTimeSteps);
+	void set_end_time_and_number_of_time_steps(double endTime, unsigned totalSimulationTimeSteps);
 
-	void ResetEndTimeAndNumberOfTimeSteps(const double& rEndTime, const unsigned& rNumberOfTimeStepsInThisRun);
+	void reset_end_time_and_number_of_time_steps(const double& rEndTime, const unsigned& rNumberOfTimeStepsInThisRun);
 
 	/** @return the timestep for the simulation, set in earlier calls */
-	double GetTimeStep() const;
+	double get_time_step() const;
 
 	/** Increments the simulation time by a single time step */
-	void IncrementTimeOneStep();
+	void increment_time_one_step();
 
 	/** @returns the number of timesteps that have elapsed in simulation thus far */
-	unsigned GetTimeStepsElapsed() const;
+	unsigned get_time_steps_elapsed() const;
 
 	/** @returns the simulation time */
-	double GetTime() const;
+	double get_time() const;
 
 	/** Destroys the current SceneTime instance */
-	static void Destroy();
+	static void destroy();
 
 	/** Set the simulation start time */
-	void SetStartTime(double startTime);
+	void set_start_time(double startTime);
 
 	/** @return the simulation start time */
-	double GetStartTime() const;
+	double get_start_time() const;
 
 	/** @return the simulation end time */
-	double GetEndTime() const;
+	double get_end_time() const;
 
 	/** Has the simulation finished running */
-	bool HasFinished() const;
+	bool has_finished() const;
 
-	double CheckTimestepperTimes() const;
+	double check_timestepper() const;
 
 protected:
 
@@ -90,7 +90,7 @@ private:
 	static std::shared_ptr<TimeStepper> mpTimeStepper;
 
 	/** Stores time at which simulation started */
-	double mStartTime;
+	double m_start_time;
 
 
 };

@@ -24,13 +24,13 @@ SceneTime* SceneTime::mpInstance = nullptr;
 std::shared_ptr<TimeStepper> SceneTime::mpTimeStepper;
 
 // @return a pointer to the scene time object
-SceneTime* SceneTime::Instance()
+SceneTime* SceneTime::instance()
 {
 	if (mpInstance == nullptr)
 	{
 		mpInstance = new SceneTime;
 		mpTimeStepper.reset();
-		std::atexit(Destroy);
+		std::atexit(destroy);
 	}
 	return mpInstance;
 }
@@ -38,14 +38,14 @@ SceneTime* SceneTime::Instance()
 // default scene time constructor
 SceneTime::SceneTime()
 	:
-	mStartTime(0.0)
+	m_start_time(0.0)
 {
 	// make sure there is only a single instance 
 	assert(mpInstance == nullptr);
 }
 
 // destroys the current SceneTime instance - called before program exit to avoid a memory leak
-void SceneTime::Destroy()
+void SceneTime::destroy()
 {
 	if (mpInstance)
 	{
@@ -55,72 +55,72 @@ void SceneTime::Destroy()
 }
 
 // get the simulation time step
-double SceneTime::GetTimeStep() const
+double SceneTime::get_time_step() const
 {
 	return mpTimeStepper->GetNextTimeStep();
 }
 
 // increment simulation by a single time step
-void SceneTime::IncrementTimeOneStep()
+void SceneTime::increment_time_one_step()
 {
 	mpTimeStepper->AdvanceOneTimeStep();
 }
 
 // get the number of time steps that have elapsed since start of the simulation
-unsigned SceneTime::GetTimeStepsElapsed() const
+unsigned SceneTime::get_time_steps_elapsed() const
 {
 	return mpTimeStepper->GetTotalTimeStepsTaken();
 }
 
 // get the simulation time
-double SceneTime::GetTime() const
+double SceneTime::get_time() const
 {
 	if (mpTimeStepper)
 	{
 		return mpTimeStepper->GetTime();
 	}
-	return mStartTime;
+	return m_start_time;
 }
 
 // set the start time of the simulation
-void SceneTime::SetStartTime(double startTime)
+void SceneTime::set_start_time(double startTime)
 {
-	mStartTime = startTime;
+	m_start_time = startTime;
 }
 
-double SceneTime::GetStartTime() const
+double SceneTime::get_start_time() const
 {
-	return mStartTime;
+	return m_start_time;
 }
 
-double SceneTime::GetEndTime() const
+double SceneTime::get_end_time() const
 {
 	return mpTimeStepper->GetEndTime();
 }
 
 // set the end time of the simulation and number of timesteps
-void SceneTime::SetEndTimeAndNumberOfTimeSteps(double endTime, unsigned totalTimeStepsInSimulation)
+void SceneTime::set_end_time_and_number_of_time_steps(double endTime, unsigned totalTimeStepsInSimulation)
 {
-	mpTimeStepper.reset(new TimeStepper(mStartTime, endTime, (endTime - mStartTime) / totalTimeStepsInSimulation));
+	mpTimeStepper.reset(new TimeStepper(m_start_time, endTime, (endTime - m_start_time) / totalTimeStepsInSimulation));
 }
 
-void SceneTime::ResetEndTimeAndNumberOfTimeSteps(const double& rEndTime, const unsigned& rNumberOfTimeStepsInThisRun)
+void SceneTime::reset_end_time_and_number_of_time_steps(const double& rEndTime, const unsigned& rNumberOfTimeStepsInThisRun)
 {
 	/** start time is the timestepper current time*/
-	mStartTime = mpTimeStepper->GetTime();
+	m_start_time = mpTimeStepper->GetTime();
 
-	assert(rEndTime > mStartTime);
+	assert(rEndTime > m_start_time);
 
 	/** reset the machinery that works out the time */
-	mpTimeStepper.reset(new TimeStepper(mStartTime, rEndTime, (rEndTime - mStartTime) / rNumberOfTimeStepsInThisRun));
+	mpTimeStepper.reset(new TimeStepper(m_start_time, rEndTime, (rEndTime - m_start_time) / rNumberOfTimeStepsInThisRun));
 }
 
-bool SceneTime::HasFinished() const
+bool SceneTime::has_finished() const
 {
 	return(mpTimeStepper->IsTimeAtEnd());
 }
 
-double SceneTime::CheckTimestepperTimes() const
+double SceneTime::check_timestepper() const
 {
 	std::cout << "Timestepper start: " << mpTimeStepper->GetStart() << '\n';
 	std::cout << "Timestepper end: " << mpTimeStepper->GetEndTime() << '\n';

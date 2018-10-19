@@ -60,7 +60,7 @@ int Bacteria::get_number_springs()
 void Bacteria::divide()
 {
 	/** Find number of births, used to allocate new ID for daughter cell */
-	unsigned numberBirths = Scene::Instance()->getNumBirths();
+	//unsigned numberBirths = Scene::Instance()->getNumBirths();
 
 	/** Reset the birthtime of the mother cell */
 	reset_cell();
@@ -69,11 +69,11 @@ void Bacteria::divide()
 	//Cell* child(new Cell());
 	Bacteria* daughter = new Bacteria();
 
-	daughter->set_birth_time(SceneTime::Instance()->GetTime()); /** Allocate the birth time of new cell to current simulation time*/
-	daughter->set_cell_id(numberBirths + 1); /** New daughter cell ID is set as the number of births */
+	daughter->set_birth_time(SceneTime::instance()->get_time()); /** Allocate the birth time of new cell to current simulation time*/
+	//daughter->set_cell_id(numberBirths + 1); /** New daughter cell ID is set as the number of births */
 
 	daughter->set_number_particles(get_number_particles()); /** TO CHANGE: number of particles will vary, depending on cell-type */
-	daughter->set_particle_offset(Scene::Instance()->getNumberActiveParticles()); /** Particle offset for flex buffers need seperate methods*/
+	//daughter->set_particle_offset(Scene::Instance()->getNumberActiveParticles()); /** Particle offset for flex buffers need seperate methods*/
 	daughter->set_spring_offset(get_number_springs());
 	daughter->set_number_springs(get_number_springs());
 

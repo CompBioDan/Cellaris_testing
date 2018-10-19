@@ -23,7 +23,8 @@
 
 #include "../utilities/datastore.h"
 #include "../utilities/scenetime.h"
-#include "../utilities/scenes.h"
+//#include "../cellaris.h"
+//#include "../utilities/scenes.h"
 
 /*
 * Basic cell class which represents most abstract 'cell' to model.

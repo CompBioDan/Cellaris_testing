@@ -23,8 +23,8 @@
     <ClCompile Include="src\cellaris\cellaris.cpp" />
     <ClCompile Include="src\cellaris\cell\bacteria.cpp" />
     <ClCompile Include="src\cellaris\cell\cell.cpp" />
+    <ClCompile Include="src\cellaris\utilities\dataexporter.cpp" />
     <ClCompile Include="src\cellaris\utilities\datastore.cpp" />
-    <ClCompile Include="src\cellaris\utilities\scenes.cpp" />
     <ClCompile Include="src\cellaris\utilities\scenetime.cpp" />
     <ClCompile Include="src\cellaris\utilities\timestepper.cpp" />
     <ClCompile Include="test\cellaris_basicfunctionality.cpp" />
@@ -35,8 +35,8 @@
     <ClInclude Include="src\cellaris\cellaris.h" />
     <ClInclude Include="src\cellaris\cell\bacteria.h" />
     <ClInclude Include="src\cellaris\cell\cell.h" />
+    <ClInclude Include="src\cellaris\utilities\dataexporter.h" />
     <ClInclude Include="src\cellaris\utilities\datastore.h" />
-    <ClInclude Include="src\cellaris\utilities\scenes.h" />
     <ClInclude Include="src\cellaris\utilities\scenetime.h" />
     <ClInclude Include="src\cellaris\utilities\timestepper.h" />
   </ItemGroup>
