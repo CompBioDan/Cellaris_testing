@@ -25,7 +25,7 @@
 #include "utilities/timestepper.h"
 #include "utilities/datastore.h"
 #include "utilities/scenetime.h"
-#include "utilities/scenes.h"
+//#include "utilities/scenes.h"
 #include "cell/cell.h"
 //#include "utilities/math/vec3.h"
 //#include "utilities/dataexporter.h"
@@ -58,6 +58,7 @@ protected:
 private:
 
 	unsigned number_births = 0; // number of cell divisions occured during sim
+	unsigned simulated_cell_count = 0;
 	int number_active_particles; // number of active particles in sim
 	unsigned output_sampling_timestep_multiple = 1; // number of timesteps between outputs
 		 
@@ -67,7 +68,7 @@ public:
 
 	/*static cellaris* Instance();*/
 	//cellaris * scene = cellaris::Instance(); // instance of 'scene'
-	SceneTime* scene_time = SceneTime::Instance(); // instance of 'scene time' which handles timestepping
+	SceneTime* scene_time = SceneTime::instance(); // instance of 'scene time' which handles timestepping
 
 	void add_cell(Cell* cell);
 
@@ -78,6 +79,7 @@ public:
 	//void set_end_time_and_timesteps(double end_time, unsigned int number_timesteps);
 	void set_scene_bounds(float x, float y, float z);
 	void set_num_births(int births);
+	void set_num_simulated_cells(int cell_count);
 	void set_output_directory(std::string output_dir);
 	void set_sampling_timestep(unsigned sampling_timestep);
 	void set_number_active_particles(int num_active_particles);

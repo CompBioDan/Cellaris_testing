@@ -28,17 +28,17 @@ int main()
 	// Set up cellaris simulation (bounds, times etc)
 	cellaris sim;
 
-	double simulation_end_time = 51.0, simulation_start_time = 0.0;
-	int number_time_steps = 51; double dt = (simulation_end_time - simulation_start_time) / number_time_steps;
-	int num_cells = 1;
+	double simulation_end_time = 9.0, simulation_start_time = 0.0;
+	int number_time_steps = 9, num_cells = 2;
+	double dt = (simulation_end_time - simulation_start_time) / number_time_steps;
 	myVec3d sim_bounds = myVec3d(2.0f, 2.0f, 2.0f);
 	double cell_radius = 0.1;
 
 	// TESTING THE SETUP
-
 	sim.set_start_and_end_times(simulation_start_time,simulation_end_time);
 	//sim.set_end_time_and_timesteps(simulation_end_time, time_steps);
 	sim.set_times_and_steps(simulation_start_time, simulation_end_time, dt);
+	sim.set_num_simulated_cells(num_cells);
 
 	// Test 'pre-set' simulation settings (default dt, bounds)
 	std::cout << "Preset dt = " << sim.get_dt() << '\n';

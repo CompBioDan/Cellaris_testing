@@ -35,7 +35,7 @@ double Cell::get_birth_time() const
 /* Method for retrieving a cell age, calculated as the difference between current simulation time and the cell birth time */
 double Cell::get_cell_age() const
 {
-	return SceneTime::Instance()->GetTime() - m_cell_birth_time;
+	return SceneTime::instance()->get_time() - m_cell_birth_time;
 }
 
 /* Method for setting cell position. Called on cell birth and in the update() method following flex call */
@@ -84,7 +84,7 @@ Default division method acts on single particle 'cell', creating a new particle 
 Cell* Cell::divide()
 {
 	/** Find number of births, used to allocate new ID for daughter cell */
-	unsigned numberBirths = Scene::Instance()->getNumBirths();
+	//unsigned numberBirths = Scene::Instance()->getNumBirths();
 
 	/** Reset the birthtime of the mother cell */
 	reset_cell();
@@ -93,8 +93,8 @@ Cell* Cell::divide()
 	//Cell* child(new Cell());
 	Cell* daughter = new Cell();
 
-	daughter->set_birth_time(SceneTime::Instance()->GetTime()); /** Allocate the birth time of new cell to current simulation time*/
-	daughter->set_cell_id(numberBirths + 1); /** New daughter cell ID is set as the number of births */
+	daughter->set_birth_time(SceneTime::instance()->get_time()); /** Allocate the birth time of new cell to current simulation time*/
+	//daughter->set_cell_id(number_births + 1); /** New daughter cell ID is set as the number of births */
 
 	// Place daughter cell close to mother cell
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
@@ -114,10 +114,10 @@ Cell* Cell::divide()
 	//daughter->set_cell_cycle_length(m_cell_cycle_length + cc(gen));
 	daughter->set_cell_cycle_length(m_cell_cycle_length);
 
-	Scene::Instance()->setNumberActiveParticles(Scene::Instance()->getNumberActiveParticles() + 1); /** TO CHANGE: Number of active particles probably returned from Flex instance*/
+	//Scene::Instance()->setNumberActiveParticles(Scene::Instance()->getNumberActiveParticles() + 1); /** TO CHANGE: Number of active particles probably returned from Flex instance*/
 
-	/** Increment the number of births during the scene */
-	Scene::Instance()->setBirths(numberBirths + 1);
+	///** Increment the number of births during the scene */
+	//Scene::Instance()->setBirths(numberBirths + 1);
 
 	/** Return the new cell */
 	return daughter;
@@ -126,7 +126,7 @@ Cell* Cell::divide()
 void Cell::reset_cell()
 {
 	/** reset the mother cell age following cell division */
-	set_birth_time(SceneTime::Instance()->GetTime());
+	set_birth_time(SceneTime::instance()->get_time());
 }
 
 void Cell::set_cell_radius(double p_radius)

@@ -1,4 +1,12 @@
-﻿  cellaris_basicfunctionality.cpp
+﻿  dataexporter.cpp
+  cell.cpp
+  bacteria.cpp
+  Generating Code...
+  Compiling...
+  cellaris_basicfunctionality.cpp
 c:\users\bcl\documents\github\cellaris_testing\cellaris\test\cellaris_basicfunctionality.cpp(49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  cellaris.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\cellaris.cpp(231): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
   Cellaris.vcxproj -> C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.exe
   Cellaris.vcxproj -> C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.pdb (Full PDB)

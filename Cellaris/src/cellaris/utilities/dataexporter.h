@@ -6,6 +6,7 @@
 #include <iosfwd>
 #include <fstream>
 #include "../cell/cell.h"
+#include "../cell/bacteria.h"
 #include "../cell/cellpopulation.h"
 
 
@@ -13,7 +14,9 @@
 
 	//class Cell;
 
-	void allCellDataWriter(Cell* cell, const char* outputFilename);
+	void basicCellDataWriter(Cell* cell, const char* outputFilename);
+
+	void bacteriaCellDataWriter(Bacteria* bac, const char* outputFilename);
 
 //}
 
