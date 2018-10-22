@@ -86,9 +86,9 @@ public:
 		return count;
 	}
 	CellarisVector() {
-		elem = new T[100];
+		elem = new T[500000];
 		count = size = 0;
-		capacity = 100;
+		capacity = 500000;
 	}
 	CellarisVector(unsigned long s) {
 		elem = new T[s];

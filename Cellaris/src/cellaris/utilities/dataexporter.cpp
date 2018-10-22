@@ -4,20 +4,23 @@
 //using namespace Cellaris;
 
 /** Output all cell held data. Input: Pointer to cell & output filename */
-void basicCellDataWriter(Cell* cell, const char* outputFilename)
+void basicCellDataWriter(Cell* cell, const std::string outputFilename)
 {
-	const char* g_outputFilename = outputFilename;
+	//const char* g_outputFilename = outputFilename;
+	const std::string g_outputFilename = outputFilename;
 	std::ofstream g_outputFile;
 
 	g_outputFile.open(g_outputFilename, std::ofstream::out | std::ofstream::app);
 	g_outputFile << std::fixed << std::setprecision(6);
 
 	SceneTime* p_scene_time = SceneTime::instance();
-	g_outputFile << "Time: " << p_scene_time->get_time() << std::endl;
+	g_outputFile << "Time: " << p_scene_time->get_time_steps_elapsed() << std::endl;
 	g_outputFile << "CellID: " << cell->get_cell_id() << std::endl;
 	g_outputFile << "Cellage: " << cell->get_cell_age() << std::endl;
 	g_outputFile << "CellBirthTime: " << cell->get_birth_time() << std::endl;
-	g_outputFile << "CellPosition: " << cell->get_cell_position().pos.x << std::endl;
+	g_outputFile << "Cell x pos: " << cell->get_cell_position().pos.x << std::endl;
+	g_outputFile << "Cell y pos: " << cell->get_cell_position().pos.y << std::endl;
+	g_outputFile << "Cell z pos: " << cell->get_cell_position().pos.z << std::endl;
 
 	g_outputFile.close();
 
