@@ -41,8 +41,6 @@ class Cell {
 
 public:
 
-	const double pi = 3.14159265358979323846;
-
 	//Cell(const myVec3d& p_position); // cell constructor
 
 	Cell* divide(); // method for dividing the cell creating new daughter cell and allocating data

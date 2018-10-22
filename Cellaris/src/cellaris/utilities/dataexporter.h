@@ -14,7 +14,8 @@
 
 	//class Cell;
 
-	void basicCellDataWriter(Cell* cell, const char* outputFilename);
+	// void basicCellDataWriter(Cell* cell, const char* outputFilename);
+	void basicCellDataWriter(Cell* cell, const std::string outputFilename);
 
 	void bacteriaCellDataWriter(Bacteria* bac, const char* outputFilename);
 

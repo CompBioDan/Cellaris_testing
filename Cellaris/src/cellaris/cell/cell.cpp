@@ -83,34 +83,24 @@ Default division method acts on single particle 'cell', creating a new particle 
 */
 Cell* Cell::divide()
 {
-	/** Find number of births, used to allocate new ID for daughter cell */
-	//unsigned numberBirths = Scene::Instance()->getNumBirths();
 
 	/** Reset the birthtime of the mother cell */
 	reset_cell();
 
 	/** Create a new daughter cell */
-	//Cell* child(new Cell());
 	Cell* daughter = new Cell();
 
+	/** Set daughter cell birth time */
 	daughter->set_birth_time(SceneTime::instance()->get_time()); /** Allocate the birth time of new cell to current simulation time*/
-	//daughter->set_cell_id(number_births + 1); /** New daughter cell ID is set as the number of births */
 
-	// Place daughter cell close to mother cell
+	/** Set radius of daughter cell */
+	daughter->set_cell_radius(m_cell_radius);
+
+	/** Allocate cell-cycle length */
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
 	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
-	std::uniform_real_distribution<> azim(-pi, pi);
-	std::uniform_real_distribution<> zen(0.0, pi);
 	std::uniform_real_distribution<> cc(-1.5, 1.5);
 
-
-	myVec3d daughter_position = get_cell_position();
-	daughter_position.pos.x = daughter_position.pos.x + (m_cell_radius*cos(azim(gen)*sin(zen(gen))));
-	daughter_position.pos.y = daughter_position.pos.y + (m_cell_radius*sin(azim(gen)*sin(zen(gen))));
-	daughter_position.pos.z = daughter_position.pos.z + (m_cell_radius*cos(zen(gen)));
-
-	daughter->set_cell_position(daughter_position);
-	daughter->set_cell_radius(m_cell_radius);
 	//daughter->set_cell_cycle_length(m_cell_cycle_length + cc(gen));
 	daughter->set_cell_cycle_length(m_cell_cycle_length);
 

@@ -28,7 +28,7 @@
 //#include "utilities/scenes.h"
 #include "cell/cell.h"
 //#include "utilities/math/vec3.h"
-//#include "utilities/dataexporter.h"
+#include "utilities/dataexporter.h"
 
 
 /**
@@ -66,6 +66,7 @@ private:
 
 public:
 
+	const double pi = 3.14159265358979323846;
 	/*static cellaris* Instance();*/
 	//cellaris * scene = cellaris::Instance(); // instance of 'scene'
 	SceneTime* scene_time = SceneTime::instance(); // instance of 'scene time' which handles timestepping
@@ -96,6 +97,7 @@ public:
 	int get_number_cells();
 	int get_number_active_particles();
 	unsigned get_number_births();
+	const std::string get_output_directory();
 
 	void evolve();
 
