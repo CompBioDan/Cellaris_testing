@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lib\flex\core\core.cpp" />
+    <ClCompile Include="lib\flex\maths\maths.cpp" />
     <ClCompile Include="lib\stdafx.cpp" />
     <ClCompile Include="src\cellaris\cellaris.cpp" />
     <ClCompile Include="src\cellaris\cell\bacteria.cpp" />
@@ -30,6 +32,15 @@
     <ClCompile Include="test\cellaris_basicfunctionality.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="lib\flex\core\core.h" />
+    <ClInclude Include="lib\flex\core\NvFlex.h" />
+    <ClInclude Include="lib\flex\core\NvFlexDevice.h" />
+    <ClInclude Include="lib\flex\core\NvFlexExt.h" />
+    <ClInclude Include="lib\flex\maths\maths.h" />
+    <ClInclude Include="lib\flex\maths\quat.h" />
+    <ClInclude Include="lib\flex\maths\vec2.h" />
+    <ClInclude Include="lib\flex\maths\vec3.h" />
+    <ClInclude Include="lib\flex\maths\vec4.h" />
     <ClInclude Include="lib\stdafx.h" />
     <ClInclude Include="lib\targetver.h" />
     <ClInclude Include="src\cellaris\cellaris.h" />
@@ -39,6 +50,15 @@
     <ClInclude Include="src\cellaris\utilities\datastore.h" />
     <ClInclude Include="src\cellaris\utilities\scenetime.h" />
     <ClInclude Include="src\cellaris\utilities\timestepper.h" />
+    <ClInclude Include="src\flex\buffers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\flex\lib\NvFlexDeviceRelease_x64.lib" />
+    <Library Include="lib\flex\lib\NvFlexExtReleaseCUDA_x64.lib" />
+    <Library Include="lib\flex\lib\NvFlexReleaseCUDA_x64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\flex\lib\NvFlexReleaseCUDA_x64.dll" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -134,6 +154,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\lib\flex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -170,6 +191,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\lib\flex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

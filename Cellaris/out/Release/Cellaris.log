@@ -1,9 +1,9 @@
 ﻿  cellaris_basicfunctionality.cpp
-test\cellaris_basicfunctionality.cpp(56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     Creating library C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Release\Cellaris.lib and object C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Release\Cellaris.exp
   Generating code
-  16 of 286 functions ( 5.6%) were compiled, the rest were copied from previous compilation.
+  17 of 332 functions ( 5.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Cellaris.vcxproj -> C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Release\Cellaris.exe
   Cellaris.vcxproj -> C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Release\Cellaris.pdb (Full PDB)
