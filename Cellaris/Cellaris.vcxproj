@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\flex\core\core.cpp" />
+    <ClCompile Include="lib\flex\core\platform.cpp" />
     <ClCompile Include="lib\flex\maths\maths.cpp" />
     <ClCompile Include="lib\stdafx.cpp" />
     <ClCompile Include="src\cellaris\cellaris.cpp" />
@@ -36,6 +37,7 @@
     <ClInclude Include="lib\flex\core\NvFlex.h" />
     <ClInclude Include="lib\flex\core\NvFlexDevice.h" />
     <ClInclude Include="lib\flex\core\NvFlexExt.h" />
+    <ClInclude Include="lib\flex\core\platform.h" />
     <ClInclude Include="lib\flex\maths\maths.h" />
     <ClInclude Include="lib\flex\maths\quat.h" />
     <ClInclude Include="lib\flex\maths\vec2.h" />
@@ -50,7 +52,6 @@
     <ClInclude Include="src\cellaris\utilities\datastore.h" />
     <ClInclude Include="src\cellaris\utilities\scenetime.h" />
     <ClInclude Include="src\cellaris\utilities\timestepper.h" />
-    <ClInclude Include="src\flex\buffers.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\flex\lib\NvFlexDeviceRelease_x64.lib" />

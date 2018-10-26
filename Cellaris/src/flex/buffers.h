@@ -253,4 +253,17 @@ void DestroyBuffers(SimBuffers* buffers) // Destroy the buffers following comple
 	delete buffers;
 }
 
+struct Emitter
+{
+	Emitter() : mSpeed(0.0f), mEnabled(false), mLeftOver(0.0f), mWidth(8)   {}
+
+	Vec3 mPos;
+	Vec3 mDir;
+	Vec3 mRight;
+	float mSpeed;
+	bool mEnabled;
+	float mLeftOver;
+	int mWidth;
+};
+
 #endif /* BUFFERS_ */

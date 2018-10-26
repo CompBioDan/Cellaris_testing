@@ -82,6 +82,9 @@
     <ClCompile Include="lib\flex\maths\maths.cpp">
       <Filter>lib\flex\maths</Filter>
     </ClCompile>
+    <ClCompile Include="lib\flex\core\platform.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\stdafx.h">
@@ -111,9 +114,6 @@
     <ClInclude Include="src\cellaris\utilities\dataexporter.h">
       <Filter>src\utilities</Filter>
     </ClInclude>
-    <ClInclude Include="src\flex\buffers.h">
-      <Filter>src\flex</Filter>
-    </ClInclude>
     <ClInclude Include="lib\flex\core\core.h">
       <Filter>lib\flex\core</Filter>
     </ClInclude>
@@ -140,6 +140,9 @@
     </ClInclude>
     <ClInclude Include="lib\flex\maths\vec4.h">
       <Filter>lib\flex\maths</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\platform.h">
+      <Filter>lib\flex\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
