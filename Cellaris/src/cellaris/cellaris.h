@@ -27,7 +27,6 @@
 //#include "../flex/buffers.h" // buffers now set here, could attempt to shift it back in future
 #include "utilities/datastore.h"
 #include "utilities/scenetime.h"
-#include "utilities/timestepper.h"
 #include "utilities/dataexporter.h"
 #include "../../lib/flex/core/NvFlex.h"
 #include "../../lib/flex/core/NvFlexExt.h"
@@ -107,6 +106,7 @@ public:
 	const std::string get_output_directory(); // method for retrieving the output directory set for the exporter method
 
 	void evolve(); // main simulation 'solve' method (evolves the scene each timestep)
+	void cell_division(int cell_id); 
 
 	CellarisVector<Cell*> cell_population; // vector containing the population of cells
 	/*static void destroy();*/
@@ -124,6 +124,7 @@ public:
 	int number_substeps = 2; // number of substeps in flex solver
 	float real_dt; // the real world time delta between updates
 	int flex_frame = 0;
+	float particle_radius = 0.1f;
 
 	float wave_floor_tilt = 0.0f;
 	float wave_plane;
@@ -135,6 +136,7 @@ public:
 	/* Initialise flex scene */
 	void intialise_flex_context(); // method for initialising flex context (CUDA context, flex library, flex descriptor)
 	void initialise_flex_scene(); // method for scene specific set up (allocating buffers, parameters etc)
+	//void initialise_flex_cells();
 	void flex_shutdown(); // method for shutting down flex library, buffers and solver following simulation
 
 	/* Flex buffers */
@@ -204,12 +206,7 @@ public:
 	};
 	SimBuffers* flex_buffers;
 
-	// NO IDEA WHY THIS WON'T GO IN CPP FILE LIKE OTHER FUNCTIONS
-	SimBuffers* alloc_buffers(NvFlexLibrary* lib)
-	{
-		return new SimBuffers(lib);
-	}
-
+	SimBuffers* alloc_buffers(NvFlexLibrary* lib); // Allocate the simulation buffers
 	void map_buffers(SimBuffers* buffers); // Maps the sim data buffers from the CPU for GPU usage
 	void unmap_buffers(SimBuffers* buffers); // Following CPU mapping/writting to the buffer it then unmaps the buffer to allow asynchronous access to GPU
 	void destroy_buffers(SimBuffers* buffers); // Destroy the buffers following completion of the simulation
@@ -235,13 +232,14 @@ public:
 
 	/* Flex 'scene' setup */
 	void flex_scene_initialize();
-	void flex_scene_post_initialize();
+	//void flex_scene_post_initialize();
 
 	void flex_scene_update(); // update any buffers (all guaranteed to be mapped here)
 	void flex_scene_sync(); // send any changes to flex (all buffers guaranteed to be unmapped here)
+	void flex_initialise_buffers();
+
 
 	void flex_update_frame();
-
 
 	void create_bacteria(Vec3 start, Vec3 dir, float stiffness, int segments, float length, int phase, float spiralAngle = 0.0f, float invmass = 1.0f, float give = 0.075f);
 	void create_spring(int first, int second, float stiffness, float give = 0.0f);

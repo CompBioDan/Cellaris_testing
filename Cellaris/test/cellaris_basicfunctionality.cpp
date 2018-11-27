@@ -43,7 +43,7 @@ int main()
 	cellaris sim;
 
 	double simulation_end_time = 52.0, simulation_start_time = 0.0;
-	int number_time_steps = 5200, num_cells = 1, sampling_count = 1000;
+	int number_time_steps = 520, num_cells = 1, sampling_count = 1000;
 	double dt = (simulation_end_time - simulation_start_time) / number_time_steps;
 	myVec3f sim_bounds = myVec3f(2.0f, 2.0f, 2.0f);
 	double cell_radius = 0.1;
@@ -93,11 +93,12 @@ int main()
 		myVec3d position; 
 		position.pos.x = rand_x(gen); position.pos.y = rand_y(gen); position.pos.z = rand_z(gen);
 
-		cell->set_cell_position(position);
+		//cell->set_cell_position(position);
 		cell->set_birth_time(random_birth(gen));
 		//cell->set_birth_time(0.0);
 		cell->set_cell_id(i);
-		cell->set_cell_radius(cell_radius);
+		cell->set_flex_particle_buffer_offset(i);
+		//cell->set_cell_radius(cell_radius);
 		cell->set_cell_cycle_length(cc_length(gen));
 		//cell->set_cell_cycle_length(10.0);
 
@@ -123,7 +124,20 @@ int main()
 
 	sim.intialise_flex_context();
 
+	//for (int y = 0; y < sim.get_number_cells(); y++)
+	//{
+	//	std::cout << "Cell position: x= " << sim.cell_population[y]->get_cell_position().pos.x << " y= " << sim.cell_population[y]->get_cell_position().pos.y << " z= " << sim.cell_population[y]->get_cell_position().pos.z << '\n';
+	//}
+	//
+
 	sim.evolve();
+
+	sim.map_buffers(sim.flex_buffers);
+	for (int y = 0; y < sim.get_number_cells(); y++)
+	{
+		std::cout << "x: " << sim.flex_buffers->positions[y].x << " y: " << sim.flex_buffers->positions[y].y << " z: " << sim.flex_buffers->positions[y].z << '\n'; 
+	}
+	sim.unmap_buffers(sim.flex_buffers);
 	
 	sim.flex_shutdown();
 
