@@ -35,6 +35,18 @@
     <Filter Include="src\utilities\math">
       <UniqueIdentifier>{91b1898e-5a3e-499d-a371-6f1e43f91ffc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib\flex">
+      <UniqueIdentifier>{c1953c8b-db06-4e60-a522-b63a0f1e5a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\flex\core">
+      <UniqueIdentifier>{4bed48bd-0a40-4e24-a135-225ea9330ea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\flex\maths">
+      <UniqueIdentifier>{dc0d9ac9-9505-411f-a020-6980eefeb31f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\flex\lib">
+      <UniqueIdentifier>{d23900d2-51d8-45e2-a296-546c2af66d4c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\stdafx.cpp">
@@ -63,6 +75,15 @@
     </ClCompile>
     <ClCompile Include="src\cellaris\utilities\dataexporter.cpp">
       <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\core.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\maths\maths.cpp">
+      <Filter>lib\flex\maths</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\platform.cpp">
+      <Filter>lib\flex\core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,5 +114,51 @@
     <ClInclude Include="src\cellaris\utilities\dataexporter.h">
       <Filter>src\utilities</Filter>
     </ClInclude>
+    <ClInclude Include="lib\flex\core\core.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\NvFlex.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\NvFlexDevice.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\NvFlexExt.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\maths\maths.h">
+      <Filter>lib\flex\maths</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\maths\quat.h">
+      <Filter>lib\flex\maths</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\maths\vec2.h">
+      <Filter>lib\flex\maths</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\maths\vec3.h">
+      <Filter>lib\flex\maths</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\maths\vec4.h">
+      <Filter>lib\flex\maths</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\platform.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\flex\lib\NvFlexDeviceRelease_x64.lib">
+      <Filter>lib\flex\lib</Filter>
+    </Library>
+    <Library Include="lib\flex\lib\NvFlexExtReleaseCUDA_x64.lib">
+      <Filter>lib\flex\lib</Filter>
+    </Library>
+    <Library Include="lib\flex\lib\NvFlexReleaseCUDA_x64.lib">
+      <Filter>lib\flex\lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\flex\lib\NvFlexReleaseCUDA_x64.dll">
+      <Filter>lib\flex\lib</Filter>
+    </None>
   </ItemGroup>
 </Project>

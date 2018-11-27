@@ -38,17 +38,17 @@ double Cell::get_cell_age() const
 	return SceneTime::instance()->get_time() - m_cell_birth_time;
 }
 
-/* Method for setting cell position. Called on cell birth and in the update() method following flex call */
-void Cell::set_cell_position(myVec3d position)
-{
-	m_cell_position = position;
-}
+///* Method for setting cell position. Called on cell birth and in the update() method following flex call */
+//void Cell::set_cell_position(myVec3d position)
+//{
+//	m_cell_position = position;
+//}
 
-/* Method for retrieving cell position. Called to find cell position to input into flex physics solving */
-myVec3d Cell::get_cell_position() const
-{
-	return m_cell_position;
-}
+///* Method for retrieving cell position. Called to find cell position to input into flex physics solving */
+//myVec3d Cell::get_cell_position() const
+//{
+//	return m_cell_position;
+//}
 
 /* Simple method fro allocating an id for each cell */
 void Cell::set_cell_id(unsigned cellId)
@@ -94,7 +94,7 @@ Cell* Cell::divide()
 	daughter->set_birth_time(SceneTime::instance()->get_time()); /** Allocate the birth time of new cell to current simulation time*/
 
 	/** Set radius of daughter cell */
-	daughter->set_cell_radius(m_cell_radius);
+	//daughter->set_cell_radius(m_cell_radius);
 
 	/** Allocate cell-cycle length */
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
@@ -119,15 +119,15 @@ void Cell::reset_cell()
 	set_birth_time(SceneTime::instance()->get_time());
 }
 
-void Cell::set_cell_radius(double p_radius)
-{
-	m_cell_radius = p_radius;
-}
-
-double Cell::get_cell_radius()
-{
-	return m_cell_radius;
-}
+//void Cell::set_cell_radius(double p_radius)
+//{
+//	m_cell_radius = p_radius;
+//}
+//
+//double Cell::get_cell_radius()
+//{
+//	return m_cell_radius;
+//}
 
 void Cell::set_cell_cycle_length(double cc_length)
 {
@@ -139,3 +139,7 @@ double Cell::get_cell_cycle_length()
 	return m_cell_cycle_length;
 }
 
+void Cell::set_flex_particle_buffer_offset(int offset)
+{
+	flex_particle_buffer_offset = offset;
+}

@@ -18,9 +18,9 @@ void basicCellDataWriter(Cell* cell, const std::string outputFilename)
 	g_outputFile << "CellID: " << cell->get_cell_id() << std::endl;
 	g_outputFile << "Cellage: " << cell->get_cell_age() << std::endl;
 	g_outputFile << "CellBirthTime: " << cell->get_birth_time() << std::endl;
-	g_outputFile << "Cell x pos: " << cell->get_cell_position().pos.x << std::endl;
+	/*g_outputFile << "Cell x pos: " << cell->get_cell_position().pos.x << std::endl;
 	g_outputFile << "Cell y pos: " << cell->get_cell_position().pos.y << std::endl;
-	g_outputFile << "Cell z pos: " << cell->get_cell_position().pos.z << std::endl;
+	g_outputFile << "Cell z pos: " << cell->get_cell_position().pos.z << std::endl;*/
 
 	g_outputFile.close();
 
@@ -44,7 +44,7 @@ void bacteriaCellDataWriter(Bacteria* bac, const char* outputFilename)
 	g_outputFile << "SpringOffset: " << bac->get_spring_offset() << std::endl;
 	g_outputFile << "SpringCount: " << bac->get_number_springs() << std::endl;
 	g_outputFile << "CellBirthTime: " << bac->get_birth_time() << std::endl;
-	g_outputFile << "CellPosition: " << bac->get_cell_position().pos.x << std::endl;
+	//g_outputFile << "CellPosition: " << bac->get_cell_position().pos.x << std::endl;
 
 	g_outputFile.close();
 

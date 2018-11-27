@@ -15,11 +15,22 @@
 **/
 
 #include "../lib/stdafx.h"
+#include <ctime>
+#include <iostream>
+
+//#include "../lib/flex/core/NvFlex.h"
 #include "../src/cellaris/cellaris.h"
 #include "../src/cellaris/cell/cell.h"
-#include <ctime>
+//#include "../src/flex/buffers.h"
 
-#include <iostream>
+//#include "../src/flex/buffers.h"
+//#include "../lib/flex/core/NvFlexExt.h"
+//#include "../lib/flex/maths/maths.h"
+
+//NvFlexSolver* g_flex; // Instance of the NvFlexSolver
+//NvFlexLibrary* g_flexLib; // Instance of flex library
+//NvFlexParams g_params;
+//NvFlexTimers g_timers;
 
 //using namespace Cellaris;
 
@@ -32,9 +43,9 @@ int main()
 	cellaris sim;
 
 	double simulation_end_time = 52.0, simulation_start_time = 0.0;
-	int number_time_steps = 52000, num_cells = 20, sampling_count = 50;
+	int number_time_steps = 520, num_cells = 1, sampling_count = 1000;
 	double dt = (simulation_end_time - simulation_start_time) / number_time_steps;
-	myVec3d sim_bounds = myVec3d(2.0f, 2.0f, 2.0f);
+	myVec3f sim_bounds = myVec3f(2.0f, 2.0f, 2.0f);
 	double cell_radius = 0.1;
 
 	// TESTING THE SETUP
@@ -45,17 +56,17 @@ int main()
 
 	sim.set_output_directory("C:/Users/BCL/Documents/GitHub/Cellaris_testing/Cellaris/out/celldata.txt");
 	sim.set_sampling_timestep(sampling_count);
-	std::cout << "Set output directory: " << sim.get_output_directory() << '\n';
+	std::cout << "Output directory: " << sim.get_output_directory() << '\n' << '\n';
 
 	// Test 'pre-set' simulation settings (default dt, bounds)
 	std::cout << "Preset dt = " << sim.get_dt() << '\n';
-	std::cout << "Preset bounds = " << sim.get_scene_bounds().pos.x << " " << sim.get_scene_bounds().pos.y << " " << sim.get_scene_bounds().pos.z << '\n';
+	std::cout << "Preset bounds = " << sim.get_scene_upper_bounds().x << " " << sim.get_scene_upper_bounds().y << " " << sim.get_scene_upper_bounds().z << '\n';
 
 	// Test setting the timestep and bounds
 	sim.set_dt(dt);
-	sim.set_scene_bounds(sim_bounds.pos.x,sim_bounds.pos.y,sim_bounds.pos.z);
+	sim.set_scene_upper_bounds(sim_bounds.pos.x,sim_bounds.pos.y,sim_bounds.pos.z);
 	std::cout << "New dt = " << sim.get_dt() << '\n';
-	std::cout << "New bounds = " << sim.get_scene_bounds().pos.x << " " << sim.get_scene_bounds().pos.y << " " << sim.get_scene_bounds().pos.z << '\n';
+	std::cout << "New bounds = " << sim.get_scene_upper_bounds().x << " " << sim.get_scene_upper_bounds().y << " " << sim.get_scene_upper_bounds().z << '\n';
 
 	// Set scene start time
 	//sim.set_start_and_end_times(10.0,10.0);
@@ -82,23 +93,23 @@ int main()
 		myVec3d position; 
 		position.pos.x = rand_x(gen); position.pos.y = rand_y(gen); position.pos.z = rand_z(gen);
 
-		cell->set_cell_position(position);
+		//cell->set_cell_position(position);
 		cell->set_birth_time(random_birth(gen));
 		//cell->set_birth_time(0.0);
 		cell->set_cell_id(i);
-		cell->set_cell_radius(cell_radius);
+		cell->set_flex_particle_buffer_offset(i);
+		//cell->set_cell_radius(cell_radius);
 		cell->set_cell_cycle_length(cc_length(gen));
 		//cell->set_cell_cycle_length(10.0);
 
 		sim.add_cell(cell);
-
 	}
 
 
 	//Test cell population saving
 	Cell* fetched_cell = sim.get_cell(0);
 
-	std::cout << "Cell cycle length: " << fetched_cell->get_cell_cycle_length() << '\n';
+	//std::cout << "Cell cycle length: " << fetched_cell->get_cell_cycle_length() << '\n';
 	/*std::cout << "Fetched cell data 1: " << '\n';
 	std::cout << "x pos: " << fetched_cell->get_cell_position().pos.x << '\n';
 	std::cout << "y pos: " << fetched_cell->get_cell_position().pos.y << '\n';
@@ -111,17 +122,34 @@ int main()
 	std::cout << "y pos: " << fetched_cell_2->get_cell_position().pos.y << '\n';
 	std::cout << "z pos: " << fetched_cell_2->get_cell_position().pos.z << '\n';*/
 
+	sim.intialise_flex_context();
+
+	//for (int y = 0; y < sim.get_number_cells(); y++)
+	//{
+	//	std::cout << "Cell position: x= " << sim.cell_population[y]->get_cell_position().pos.x << " y= " << sim.cell_population[y]->get_cell_position().pos.y << " z= " << sim.cell_population[y]->get_cell_position().pos.z << '\n';
+	//}
+	//
+
 	sim.evolve();
+
+	sim.map_buffers(sim.flex_buffers);
+	for (int y = 0; y < sim.get_number_cells(); y++)
+	{
+		std::cout << "x: " << sim.flex_buffers->positions[y].x << " y: " << sim.flex_buffers->positions[y].y << " z: " << sim.flex_buffers->positions[y].z << '\n'; 
+	}
+	sim.unmap_buffers(sim.flex_buffers);
+	
+	sim.flex_shutdown();
 
 	std::cout << "Cells in simulation at end: " << sim.get_number_cells() << '\n';
 
 	sim.destroy_scene_time();
 
-	
 	// the code you wish to time goes here
 	int stop_s = clock();
 
 	std::cout << "time: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 <<'\n';
+
 
 	std::cin.ignore();
 

@@ -45,6 +45,10 @@ struct floatVec4d {
 	float x, y, z, m;
 };
 
+struct floatVec3f {
+	float x, y, z;
+};
+
 
 class myVec3d {
 public:
@@ -69,6 +73,31 @@ public:
 	void scale(double s, const myVec3d& v);
 	void cross(const myVec3d& v1, const myVec3d& v2);
 	doubleVec3d pos;
+};
+
+class myVec3f {
+public:
+	myVec3f();
+	myVec3f(float x, float y, float z);
+	myVec3f(const myVec3f& v);
+	~myVec3f();
+	myVec3f& operator=(myVec3f rhs) {
+		pos.x = rhs.pos.x;
+		pos.y = rhs.pos.y;
+		pos.z = rhs.pos.z;
+		return *this;
+	}
+	;
+	void normalize();
+	float length();
+	float lengthSquared();
+	void add(const myVec3f& v);
+	void sub(const myVec3f& v);
+	void negate(const myVec3f& v);
+	void scale(float s);
+	void scale(float s, const myVec3f& v);
+	void cross(const myVec3f& v1, const myVec3f& v2);
+	floatVec3f pos;
 };
 
 template<typename T>

@@ -23,6 +23,7 @@
 
 #include "../utilities/datastore.h"
 #include "../utilities/scenetime.h"
+
 //#include "../cellaris.h"
 //#include "../utilities/scenes.h"
 
@@ -53,9 +54,9 @@ public:
 
 	double get_cell_age() const; // return cell age
 
-	void set_cell_position(myVec3d position); // set cell's position
+	//void set_cell_position(myVec3d position); // set cell's position
 
-	myVec3d get_cell_position() const; // return cell position
+	//myVec3d get_cell_position() const; // return cell position
 
 	void set_cell_id(unsigned cellId); // allocate cell ID
 
@@ -65,19 +66,21 @@ public:
 
 	bool ready_to_divide(); // flag for division
 
-	void set_cell_radius(double p_radius);
+	//void set_cell_radius(double p_radius);
 
-	double get_cell_radius();
+	//double get_cell_radius();
 
 	void set_cell_cycle_length(double cc_length);
 
 	double get_cell_cycle_length();
 
+	void set_flex_particle_buffer_offset(int offset);
+
 protected:
 
 	bool m_cellcycle_end; // has the cell reached the end of its cell-cycle -> check to pass to initiate cell division
 
-	myVec3d m_cell_position; // position of first particle in cell (arbitrary)
+	//myVec3d m_cell_position; // position of first particle in cell (arbitrary)
 
 	double m_cell_birth_time; // cell's birth time
 
@@ -87,7 +90,11 @@ protected:
 	
 	double m_cell_cycle_length; // TO CHANGE :- implement specific cell-cycle models
 	
-	double m_cell_radius; // default single 'particle' cell radius corresponds to flex particle radius
+	//double m_cell_radius; // default single 'particle' cell radius corresponds to flex particle radius
+
+	int flex_particle_buffer_offset; // index of first flex 'particle' making up cell
+
+	int flex_particle_count = 1; // number of flex 'particles' in cell
 };
 //}
 
