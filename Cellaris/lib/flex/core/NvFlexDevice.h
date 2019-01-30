@@ -28,6 +28,10 @@
 #ifndef NV_FLEX_DEVICE_H
 #define NV_FLEX_DEVICE_H
 
+#if defined(_WIN32) && !defined(WIN32)
+#define WIN32 1
+#endif
+
 //! \cond HIDDEN_SYMBOLS
 #ifndef NV_FLEX_API
 #if _WIN32

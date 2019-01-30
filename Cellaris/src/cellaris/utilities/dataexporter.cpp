@@ -39,10 +39,10 @@ void bacteriaCellDataWriter(Bacteria* bac, const char* outputFilename)
 	g_outputFile << "Time: " << p_scene_time->get_time() << std::endl;
 	g_outputFile << "CellID: " << bac->get_cell_id() << std::endl;
 	g_outputFile << "Cellage: " << bac->get_cell_age() << std::endl;
-	g_outputFile << "ParticleCount: " << bac->get_number_particles() << std::endl;
-	g_outputFile << "ParticleOffset: " << bac->get_particle_offset() << std::endl;
-	g_outputFile << "SpringOffset: " << bac->get_spring_offset() << std::endl;
-	g_outputFile << "SpringCount: " << bac->get_number_springs() << std::endl;
+	//g_outputFile << "ParticleCount: " << bac->get_number_particles() << std::endl;
+	//g_outputFile << "ParticleOffset: " << bac->get_particle_offset() << std::endl;
+	//g_outputFile << "SpringOffset: " << bac->get_spring_offset() << std::endl;
+	//g_outputFile << "SpringCount: " << bac->get_number_springs() << std::endl;
 	g_outputFile << "CellBirthTime: " << bac->get_birth_time() << std::endl;
 	//g_outputFile << "CellPosition: " << bac->get_cell_position().pos.x << std::endl;
 
@@ -68,4 +68,16 @@ void cellAgeWriter(Cell* cell, const char* outputFilename)
 	g_outputFile.close();
 
 }
+
+//void flexBufferWriter(SimBuffers* flex_buffers, const char* outputFilename)
+//{
+//	const char* g_outputFilename = outputFilename;
+//	std::ofstream g_outputFile;
+//
+//	g_outputFile.open(g_outputFilename, std::ofstream::out | std::ofstream::app);
+//	g_outputFile << std::fixed << std::setprecision(6);
+//	for(int buf = 0; buf < flexbuffers
+//	g_outputFile << "Time: " << p_scene_time->get_time() << std::endl;
+//
+//}
 

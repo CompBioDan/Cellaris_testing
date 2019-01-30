@@ -1,0 +1,47 @@
+﻿  aabbtree.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\aabbtree.cpp(796): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  core.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\core.cpp(30): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  mesh.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\mesh.cpp(969): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  perlin.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\perlin.cpp(368): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  pfm.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\pfm.cpp(122): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  platform.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\platform.cpp(348): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  sdf.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\sdf.cpp(361): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  voxelize.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\core\voxelize.cpp(94): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  maths.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\flex\maths\maths.cpp(69): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  imgui.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\imgui.cpp(700): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  imguiRenderGL.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\opengl\imguirendergl.cpp(485): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  shader.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\opengl\shader.cpp(249): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  SDL_main.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\sdl2-2.0.4\include\sdl_main.cpp(1): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  stdafx.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\lib\stdafx.cpp(5): fatal error C1083: Cannot open precompiled header file: 'Release\Cellaris.pch': No such file or directory
+  cellaris.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\cellaris.cpp(1372): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  bacteria.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\cell\bacteria.cpp(123): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  cell.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\cell\cell.cpp(206): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  dataexporter.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\utilities\dataexporter.cpp(84): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  datastore.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\utilities\datastore.cpp(169): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  scenetime.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\utilities\scenetime.cpp(134): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Compiling...
+  timestepper.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\utilities\timestepper.cpp(109): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  cellaris_basicfunctionality.cpp
+c:\users\bcl\documents\github\cellaris_testing\cellaris\test\cellaris_basicfunctionality.cpp(38): warning C4005: 'WIN32': macro redefinition
+  c:\users\bcl\documents\github\cellaris_testing\cellaris\test\cellaris_basicfunctionality.cpp(38): note: command-line arguments:  see previous definition of 'WIN32'
+c:\users\bcl\documents\github\cellaris_testing\cellaris\test\cellaris_basicfunctionality.cpp(203): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?

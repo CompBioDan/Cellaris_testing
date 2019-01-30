@@ -25,33 +25,51 @@ public:
 
 	//virtual void update();
 
-	void set_particle_offset(int particleoffset);
+	virtual Cell* divide();
 
-	void set_number_particles(int numparticles);
+	virtual bool ready_to_grow();
 
-	void set_spring_offset(int springoffset);
+	virtual bool ready_to_divide();
 
-	void set_number_springs(int numbersprings);
+	virtual void grow_cell();
 
-	int get_number_particles();
+	//void set_particle_offset(int particleoffset);
 
-	int get_particle_offset();
+	//void set_number_particles(int numparticles);
 
-	int get_number_springs();
+	//void set_spring_offset(int springoffset);
 
-	int get_spring_offset();
+	//void set_number_springs(int numbersprings);
+
+	//int get_number_particles();
+
+	//int get_particle_offset();
+
+	//int get_number_springs();
+
+	//int get_spring_offset();
+
+	int number_growth_particles = 1;
+
+	int number_growth_springs = 2;
+
+	int max_particles = 6;
+
+	int max_springs = 9;
+
+	double growth_prob = 0.01;
 
 private:
 
-	void divide();
+	//void grow();
 
-	int m_particle_offset; // integer position of first cell particle within the FleX buffers
+	//int m_particle_offset; // integer position of first cell particle within the FleX buffers
 
-	int m_number_particles; // number of particles that form the cell
+	//int m_number_particles; // number of particles that form the cell
 
-	int m_spring_offset; // integer position of first cell spring within the FleX buffers
+	//int m_spring_offset; // integer position of first cell spring within the FleX buffers
 
-	int m_number_springs; // number of springs forming the cell
+	//int m_number_springs; // number of springs forming the cell
 
 
 };
