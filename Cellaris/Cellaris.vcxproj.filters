@@ -47,6 +47,12 @@
     <Filter Include="lib\flex\lib">
       <UniqueIdentifier>{d23900d2-51d8-45e2-a296-546c2af66d4c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib\opengl">
+      <UniqueIdentifier>{419b45c7-d3be-4854-99ce-9c498e29aece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\SDL">
+      <UniqueIdentifier>{f97d55ec-2165-4f12-ad29-78664bddb7de}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\stdafx.cpp">
@@ -54,9 +60,6 @@
     </ClCompile>
     <ClCompile Include="src\cellaris\cellaris.cpp">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="test\cellaris_basicfunctionality.cpp">
-      <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="src\cellaris\utilities\scenetime.cpp">
       <Filter>src\utilities</Filter>
@@ -84,6 +87,37 @@
     </ClCompile>
     <ClCompile Include="lib\flex\core\platform.cpp">
       <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\opengl\imguiRenderGL.cpp">
+      <Filter>lib\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\opengl\shader.cpp">
+      <Filter>lib\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\mesh.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\perlin.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\pfm.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\sdf.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\voxelize.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\flex\core\aabbtree.cpp">
+      <Filter>lib\flex\core</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\SDL2-2.0.4\include\SDL_main.cpp" />
+    <ClCompile Include="test\main.cpp">
+      <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +178,252 @@
     <ClInclude Include="lib\flex\core\platform.h">
       <Filter>lib\flex\core</Filter>
     </ClInclude>
+    <ClInclude Include="lib\opengl\imguiRenderGL.h">
+      <Filter>lib\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\opengl\shader.h">
+      <Filter>lib\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\shaders.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\mesh.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\convex.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\perlin.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\pfm.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\sdf.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\voxelize.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\flex\core\aabbtree.h">
+      <Filter>lib\flex\core</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\begin_code.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\close_code.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_assert.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_atomic.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_audio.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_bits.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_blendmode.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_clipboard.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_config.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_cpuinfo.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_egl.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_endian.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_error.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_events.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_filesystem.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_gamecontroller.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_gesture.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_haptic.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_hints.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_joystick.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_keyboard.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_keycode.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_loadso.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_log.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_main.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_messagebox.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_mouse.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_mutex.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_name.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengl.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengl_glext.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengles.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengles2.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengles2_gl2.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengles2_gl2ext.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengles2_gl2platform.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_opengles2_khrplatform.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_pixels.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_platform.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_power.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_quit.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_rect.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_render.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_revision.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_rwops.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_scancode.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_shape.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_stdinc.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_surface.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_system.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_syswm.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_assert.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_common.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_compare.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_crc32.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_font.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_fuzzer.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_harness.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_images.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_log.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_md5.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_test_random.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_thread.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_timer.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_touch.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_types.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_version.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\SDL2-2.0.4\include\SDL_video.h">
+      <Filter>lib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\stb_truetype.h">
+      <Filter>lib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\flex\lib\NvFlexDeviceRelease_x64.lib">
@@ -155,9 +435,21 @@
     <Library Include="lib\flex\lib\NvFlexReleaseCUDA_x64.lib">
       <Filter>lib\flex\lib</Filter>
     </Library>
+    <Library Include="lib\flex\lib\glew32.lib">
+      <Filter>lib\flex\lib</Filter>
+    </Library>
+    <Library Include="lib\flex\lib\SDL2.lib">
+      <Filter>lib\flex\lib</Filter>
+    </Library>
+    <Library Include="lib\flex\lib\SDL2test.lib">
+      <Filter>lib\flex\lib</Filter>
+    </Library>
   </ItemGroup>
   <ItemGroup>
     <None Include="lib\flex\lib\NvFlexReleaseCUDA_x64.dll">
+      <Filter>lib\flex\lib</Filter>
+    </None>
+    <None Include="lib\flex\lib\SDL2.dll">
       <Filter>lib\flex\lib</Filter>
     </None>
   </ItemGroup>

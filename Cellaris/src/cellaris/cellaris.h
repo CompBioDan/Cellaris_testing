@@ -17,23 +17,48 @@
 #ifndef CELLARIS_H_
 #define CELLARIS_H_
 
-#include <map>
+
 #include <vector>
 #include <random>
 #include <climits>
-#include <iostream>
+
 
 #include "cell/cell.h"
+
+#include "../../lib/flex/core/types.h"
+#include "../../lib/flex/maths/maths.h"
+#include "../../lib/flex/core/platform.h"
+#include "../../lib/flex/core/mesh.h"
+#include "../../lib/flex/core/voxelize.h" //include (OK)
+#include "../../lib/flex/core/sdf.h" //include (OK)
+#include "../../lib/flex/core/pfm.h" //include (OK)
+#include "../../lib/flex/core/tga.h"
+#include "../../lib/flex/core/perlin.h" //include (OK)
+#include "../../lib/flex/core/convex.h" //include (OK)
+#include "../../lib/flex/core/cloth.h" //include (OK)
+
+#include "../../lib/SDL2-2.0.4/include/SDL.h"
+
+#include "../../lib/flex/core/NvFlex.h"
+#include "../../lib/flex/core/NvFlexExt.h"
+#include "../../lib/flex/core/NvFlexDevice.h"
+
 //#include "../flex/buffers.h" // buffers now set here, could attempt to shift it back in future
 #include "utilities/datastore.h"
 #include "utilities/scenetime.h"
 #include "utilities/dataexporter.h"
-#include "../../lib/flex/core/NvFlex.h"
-#include "../../lib/flex/core/NvFlexExt.h"
-#include "../../lib/flex/core/NvFlexDevice.h"
-#include "../../lib/flex/maths/maths.h"
+
 //#include "../../lib/flex/core/helpers.h"
-#include "../../lib/flex/core/platform.h"
+
+
+#include <iostream>
+#include <map>
+
+#include "../../lib/shaders.h" // (OK?)
+#include "../../lib/imgui.h" // (OK?)
+
+
+
 
 /**
 *
@@ -56,7 +81,7 @@ protected:
 	double scene_start_time = 0.0; // simulation start time (default 0.0)
 	double scene_end_time; // simulation end time
 	double simulation_time; // length of simulation
-	Vec3 scene_upper_bounds = Vec3(1.0f, 1.0f, 1.0f); // scene bounds (default 1,1,1)
+	Vec3 scene_upper_bounds = Vec3(5.0f, 5.0f, 5.0f); // scene bounds (default 1,1,1)
 	Vec3 scene_lower_bounds = Vec3(0.0f, 0.0f, 0.0f); // scene bounds (default 0,0,0)
 	std::string scene_output_directory; // output directory
 	double cell_cycle_length = 10.0; // simple cell cycle length
@@ -65,7 +90,7 @@ protected:
 private:
 
 	unsigned number_births = 0; // number of cell divisions occured during sim
-	unsigned simulated_cell_count = 0; // number of cells in the simulation
+	//unsigned simulated_cell_count = cell_population.getCount(); // number of cells in the simulation
 	int number_active_particles; // number of active particles in simulation (FleX)
 	unsigned output_sampling_timestep_multiple = 1; // number of timesteps between outputs in exporter class
 		 
@@ -73,12 +98,15 @@ private:
 
 public:
 
+	
+
 	const double pi = 3.14159265358979323846; 
 	/*static cellaris* Instance();*/
 	//cellaris * scene = cellaris::Instance(); // instance of 'scene'
 	SceneTime* scene_time = SceneTime::instance(); // instance of 'scene time' which handles timestepping
 
 	void add_cell(Cell* cell); // method for adding a 'cell' to the cell population
+	//void add_cell(Bacteria* cell); // method for adding a 'cell' to the cell population
 
 	void set_dt(double timestep); // method to set the timestep 
 	void set_simulation_time(double sim_time); // method for setting simulation length
@@ -86,7 +114,7 @@ public:
 	//void set_end_time_and_timesteps(double end_time, unsigned int number_timesteps);
 	void set_scene_upper_bounds(float x, float y, float z); // method for setting x, y, z dimensions for simulation
 	void set_num_births(int births); // method for setting number of births in the simulation
-	void set_num_simulated_cells(int cell_count); // method for setting the number of cells in simulation
+	//void set_num_simulated_cells(int cell_count); // method for setting the number of cells in simulation
 	void set_output_directory(std::string output_dir); // method for setting output directory (used by the exporter class)
 	void set_sampling_timestep(unsigned sampling_timestep); // method for setting number of timesteps between data exporting
 	void set_number_active_particles(int num_active_particles); // method for setting number of active particles in simulation (used by FleX)
@@ -99,15 +127,19 @@ public:
 	double get_simulation_time(); // method for retrieving simulation length 
 	double get_start_time(); // method for retrieving simulation start time (from scene_time) useful for cases where start_time != 0
 	Vec3 get_scene_upper_bounds(); // method for retrieving simulation scene bounds
+	//Cell* get_cell(unsigned int cell_id); // method for retrieving 'cell' data
 	Cell* get_cell(unsigned int cell_id); // method for retrieving 'cell' data
 	int get_number_cells(); // method for retrieving the number of cells in simulation
 	int get_number_active_particles(); // method for retrieving number of active particles in scene (used for FleX)
 	unsigned get_number_births(); // method for retrieving number of births in the simulation
 	const std::string get_output_directory(); // method for retrieving the output directory set for the exporter method
+	//unsigned get_simulated_cell_count();
 
 	void evolve(); // main simulation 'solve' method (evolves the scene each timestep)
 	void cell_division(int cell_id); 
+	void cell_growth(int cell_id);
 
+	//CellarisVector<Cell*> cell_population; // vector containing the population of cells
 	CellarisVector<Cell*> cell_population; // vector containing the population of cells
 	/*static void destroy();*/
 
@@ -124,7 +156,7 @@ public:
 	int number_substeps = 2; // number of substeps in flex solver
 	float real_dt; // the real world time delta between updates
 	int flex_frame = 0;
-	float particle_radius = 0.1f;
+	float particle_radius = 0.2f;
 
 	float wave_floor_tilt = 0.0f;
 	float wave_plane;
@@ -206,6 +238,15 @@ public:
 	};
 	SimBuffers* flex_buffers;
 
+	/* Interim buffers for the cells */
+	std::vector<Vec4> particles_holder;
+	std::vector<Vec3> velocities_holder;
+	std::vector<int> phases_holder;
+	std::vector<float> springstiffness_holder;
+	std::vector<float> springlengths_holder;
+	std::vector<int> springindices_holder;
+	Vec3 particleSpacing;
+
 	SimBuffers* alloc_buffers(NvFlexLibrary* lib); // Allocate the simulation buffers
 	void map_buffers(SimBuffers* buffers); // Maps the sim data buffers from the CPU for GPU usage
 	void unmap_buffers(SimBuffers* buffers); // Following CPU mapping/writting to the buffer it then unmaps the buffer to allow asynchronous access to GPU
@@ -244,6 +285,10 @@ public:
 	void create_bacteria(Vec3 start, Vec3 dir, float stiffness, int segments, float length, int phase, float spiralAngle = 0.0f, float invmass = 1.0f, float give = 0.075f);
 	void create_spring(int first, int second, float stiffness, float give = 0.0f);
 
+
+	void DrawShapes();
+
+	
 };
 
 //}

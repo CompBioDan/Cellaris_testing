@@ -139,7 +139,67 @@ double Cell::get_cell_cycle_length()
 	return m_cell_cycle_length;
 }
 
+/* Flex Data Methods */
 void Cell::set_flex_particle_buffer_offset(int offset)
 {
-	flex_particle_buffer_offset = offset;
+	m_flex_particle_buffer_offset = offset;
+}
+
+void Cell::set_flex_particle_count(int particle_count)
+{
+	m_flex_particle_count = particle_count;
+}
+
+void Cell::set_flex_spring_buffer_offset(int spring_offset)
+{
+	m_flex_spring_buffer_offset = spring_offset;
+}
+
+void Cell::set_flex_spring_count(int spring_count)
+{
+	m_flex_spring_count = spring_count;
+}
+
+
+int Cell::get_flex_particle_buffer_offset()
+{
+	return m_flex_particle_buffer_offset;
+}
+
+int Cell::get_flex_particle_count()
+{
+	return m_flex_particle_count;
+}
+
+int Cell::get_flex_spring_buffer_offset()
+{
+	return m_flex_spring_buffer_offset;
+}
+
+int Cell::get_flex_spring_count()
+{
+	return m_flex_spring_count;
+}
+
+bool Cell::ready_to_grow()
+{
+	//return 0;
+	double growth_prob = 0.01;
+
+	std::random_device rd;  //Will be used to obtain a seed for the random number engine
+	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
+	std::uniform_real_distribution<> prob(0, 1);
+
+	if (prob(gen) <= growth_prob)
+	{
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+void Cell::grow_cell()
+{
+	
 }

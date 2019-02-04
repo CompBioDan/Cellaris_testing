@@ -38,8 +38,11 @@
 #include <string.h>
 
 using namespace std;
+#if defined(_WIN32) && !defined(WIN32)
+#define WIN32 1
+#endif
 
-
+#ifdef WIN32
 #include <windows.h>
 #include <commdlg.h>
 #include <mmsystem.h>
@@ -162,6 +165,7 @@ void Sleep(double seconds)
 //}
 
 
+#endif
 
 
 

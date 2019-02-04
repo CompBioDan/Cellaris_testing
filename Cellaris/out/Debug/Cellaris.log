@@ -1,15 +1,3 @@
-﻿  cellaris_basicfunctionality.cpp
-  datastore.cpp
-  cellaris.cpp
-c:\users\bcl\documents\github\cellaris_testing\cellaris\src\cellaris\cellaris.cpp(265): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  maths.cpp
-  core.cpp
-  Generating Code...
-  Compiling...
-  dataexporter.cpp
-  cell.cpp
-  bacteria.cpp
-  Generating Code...
-     Creating library C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.lib and object C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.exp
-  Cellaris.vcxproj -> C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.exe
-  Cellaris.vcxproj -> C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.pdb (Full PDB)
+﻿     Creating library C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.lib and object C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.exp
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\BCL\Documents\GitHub\Cellaris_testing\Cellaris\out\Debug\Cellaris.exe : fatal error LNK1120: 1 unresolved externals

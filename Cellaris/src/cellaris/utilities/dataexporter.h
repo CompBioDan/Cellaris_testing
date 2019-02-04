@@ -19,6 +19,8 @@
 
 	void bacteriaCellDataWriter(Bacteria* bac, const char* outputFilename);
 
+	//void flexBufferWriter(SimBuffers* flex_buffers, const char* outputFilename);
+
 //}
 
 #endif /* DATAEXPORTER_H_ */
